@@ -1,0 +1,23 @@
+{
+  "name": "frontdesk-nexus-bridge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DualPMS VPS → Supabase bridge (run with PM2 on the DualPMS server)",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "sync": "tsx src/index.ts --once",
+    "test": "tsx src/index.ts --test",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.102.1",
+    "dotenv": "^16.6.1",
+    "imapflow": "^1.0.171"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "tsx": "^4.20.3",
+    "typescript": "~6.0.2"
+  }
+}
